@@ -6,7 +6,7 @@
 
 body {
     background-image: url("the fox.jpg");
-    background-size: cover;
+    background-size: 70% auto;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
