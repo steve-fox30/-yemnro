@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>V FOX - LEVEL 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .level {
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .level-number {
+            color: #777;
+            letter-spacing: 5px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            letter-spacing: 8px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            color: #888;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        input {
+            background: transparent;
+            border: 1px solid #555;
+            color: white;
+            padding: 14px;
+            width: 250px;
+            text-align: center;
+            outline: none;
+        }
+
+        button {
+            background: transparent;
+            color: white;
+            border: 1px solid #555;
+            padding: 14px 25px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+        }
+
+        #result {
+            margin-top: 25px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="level">
+
+        <p class="level-number">LEVEL 01</p>
+
+        <h1>YOUR FAVORITE</h1>
+
+        <p class="message">
+            Clue berada di minuman itu sendiri.<br>
+            SG93IG1hbnkgbWF0Y2hhIGRyaW5rcyBhcmUgdGhlcmU/
+        </p>
+
+        <input 
+            type="text" 
+            id="answer" 
+            placeholder="MASUKKAN SANDI"
+        >
+
+        <button onclick="checkAnswer()">
+            SUBMIT
+        </button>
+
+        <p id="result"></p>
+
+    </main>
+
+    <script>
+
+        function checkAnswer() {
+
+            let answer = document.getElementById("answer").value;
+
+            if (answer === "10") {
+
+                document.getElementById("result").innerHTML =
+                "BENAR. SEBUAH PINTU TELAH TERBUKA.";
+
+            } else {
+
+                document.getElementById("result").innerHTML =
+                "SALAH. TAPI KAMU SUDAH TERLALU JAUH UNTUK BERHENTI.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
