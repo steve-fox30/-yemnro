@@ -107,28 +107,15 @@
 
     </main>
 
-    <script>
+   <script>
+    function checkAnswer() {
+        let answer = document.getElementById("answer").value.trim();
 
-        function checkAnswer() {
-
-            let answer = document.getElementById("answer").value;
-
-            if (answer === "10") {
-
-    window.location.href = "level2.html";
-
-}
-
-            } else {
-
-                document.getElementById("result").innerHTML =
-                "SALAH. TAPI KAMU SUDAH TERLALU JAUH UNTUK BERHENTI.";
-
-            }
-
+        if (answer === "10") {
+            window.location.href = "level2.html";
+        } else {
+            document.getElementById("result").innerHTML =
+            "SALAH. TAPI KAMU SUDAH TERLALU JAUH UNTUK BERHENTI.";
         }
-
-    </script>
-
-</body>
-</html>
+    }
+</script>
