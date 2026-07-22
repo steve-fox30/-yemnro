@@ -53,8 +53,8 @@
         }
 
         .code {
-            font-size: 24px;
-            letter-spacing: 5px;
+            font-size: 30px;
+            letter-spacing: 8px;
             margin-bottom: 40px;
         }
 
@@ -91,6 +91,19 @@
             margin-top: 25px;
             color: #888;
         }
+
+        .hidden-clue {
+            position: fixed;
+            bottom: 20px;
+            right: 25px;
+
+            font-size: 10px;
+            letter-spacing: 3px;
+
+            color: #222;
+
+            line-height: 1.8;
+        }
     </style>
 </head>
 
@@ -107,12 +120,12 @@
         </h1>
 
         <p class="message">
-            Tiga langkah telah membawamu ke sini.<br>
-            Sekarang, lihat lebih dekat.
+            Yang pertama menjadi yang terakhir.<br>
+            Yang terakhir menjadi yang pertama.
         </p>
 
         <div class="code">
-            20 - 8 - 5 &nbsp; 6 - 15 - 24
+            GSV&nbsp;&nbsp;ULC
         </div>
 
         <input
@@ -128,6 +141,11 @@
         <p id="result"></p>
 
     </main>
+
+    <p class="hidden-clue">
+        A = Z<br>
+        ATBASH CIPHER
+    </p>
 
     <script>
 
@@ -148,7 +166,7 @@
                 document
                     .getElementById("result")
                     .innerHTML =
-                    "BELUM. SINYAL TERAKHIR MASIH TERSEMBUNYI.";
+                    "BELUM. YANG PERTAMA MASIH MENUNGGU YANG TERAKHIR.";
 
             }
 
