@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>V FOX - PUZZLE 3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .puzzle {
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .puzzle-number {
+            color: #777;
+            letter-spacing: 5px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            letter-spacing: 8px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            color: #888;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .code {
+            font-size: 24px;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
+        }
+
+        input {
+            background: transparent;
+            border: 1px solid #555;
+            color: white;
+
+            padding: 14px;
+            width: 250px;
+
+            text-align: center;
+            outline: none;
+        }
+
+        button {
+            background: transparent;
+            color: white;
+
+            border: 1px solid #555;
+
+            padding: 14px 25px;
+            margin-left: 10px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+        }
+
+        #result {
+            margin-top: 25px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="puzzle">
+
+        <p class="puzzle-number">
+            PUZZLE 03
+        </p>
+
+        <h1>
+            THE FINAL SIGNAL
+        </h1>
+
+        <p class="message">
+            Tiga langkah telah membawamu ke sini.<br>
+            Sekarang, lihat lebih dekat.
+        </p>
+
+        <div class="code">
+            20 - 8 - 5 &nbsp; 6 - 15 - 24
+        </div>
+
+        <input
+            type="text"
+            id="answer"
+            placeholder="MASUKKAN JAWABAN"
+        >
+
+        <button onclick="checkAnswer()">
+            SUBMIT
+        </button>
+
+        <p id="result"></p>
+
+    </main>
+
+    <script>
+
+        function checkAnswer() {
+
+            let answer = document
+                .getElementById("answer")
+                .value
+                .trim()
+                .toLowerCase();
+
+            if (answer === "the fox") {
+
+                window.location.href = "prize.html";
+
+            } else {
+
+                document
+                    .getElementById("result")
+                    .innerHTML =
+                    "BELUM. SINYAL TERAKHIR MASIH TERSEMBUNYI.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
